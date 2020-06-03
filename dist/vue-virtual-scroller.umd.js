@@ -1319,9 +1319,11 @@
                         (_vm.direction === "vertical" ? "Y" : "X") +
                         "(" +
                         view.position +
-                        "px)"
+                        "px)",
+                      "--index": view.nr.index
                     }
                   : null,
+                attrs: { "data-index": view.nr.index },
                 on: {
                   mouseenter: function($event) {
                     _vm.hoverKey = view.nr.key;
